@@ -1,362 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>WELCOME TO SCEZONEX RC</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WELCOME TO SCEZONEX RC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <script src="script.js"></script>
-    <div>
-        <img src="image.png" alt="LOGO" height="100">
-    </div>
+<body class="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 text-gray-800">
+  <!-- Header -->
+  <div class="text-center py-6">
+    <img src="image.png" alt="LOGO" class="h-24 mx-auto rounded-full shadow-md" />
+    <h1 class="text-3xl font-bold mt-4">WELCOME TO OUR COLLEGE</h1>
+    <p class="text-md mt-1 text-purple-700 font-semibold">GOVERNMENT COLLEGE OF ENGINEERING AND LEATHER TECHNOLOGY</p>
+  </div>
 
-    <h1>WELCOME TO OUR COLLEGE <br><span>GOVERNMENT COLLEGE OF ENGINEERING AND LEATHER TECHNOLOGY</span></h1>
-    <img src="COLLEGE 1.jpeg" alt="COLLEGE " height="230">
-    <img src="COLLEGE 11.jpeg" alt="COLLEGE" height="230">
-    <img src="COLLEGE 12.jpeg" alt="COLLEGE" height="230">
-    <img src="COLLEGE2.jpeg" alt="COLLEGE" height="230">
-    <img src="COLLEGE3.jpeg" alt="COLLEGE" height="230">
+  <!-- Image Gallery -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 px-6 mb-10">
+    <img src="COLLEGE 1.jpeg" alt="College" class="w-full h-auto rounded shadow" />
+    <img src="COLLEGE 11.jpeg" alt="College" class="w-full h-auto rounded shadow" />
+    <img src="COLLEGE 12.jpeg" alt="College" class="w-full h-auto rounded shadow" />
+    <img src="COLLEGE2.jpeg" alt="College" class="w-full h-auto rounded shadow" />
+    <img src="COLLEGE3.jpeg" alt="College" class="w-full h-auto rounded shadow" />
+  </div>
 
-    <form action="">
-        <h1>student information</h1>
+  <!-- Form -->
+  <form class="max-w-5xl mx-auto bg-white p-6 sm:p-10 rounded-xl shadow-lg space-y-6">
+    <h2 class="text-2xl font-bold text-blue-700 text-center mb-4">🎓 Student Information</h2>
 
-        <h2>Personal Details</h2>
+    <!-- Personal Details -->
+    <section>
+      <h3 class="text-xl font-semibold text-purple-600 mb-3">👤 Personal Details</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" name="Name" id="Name" placeholder="First Name (e.g. Subhadip)" required class="input" />
+        <input type="text" name="name" id="name" placeholder="Middle Name (e.g. Jayadip)" required class="input" />
+        <input type="text" name="text" id="text" placeholder="Last Name (e.g. Samanta)" required class="input" />
+        <input type="date" name="date" id="date" class="input" />
+      </div>
+      <div class="mt-4">
+        <label class="font-semibold block mb-1">Gender:</label>
+        <div class="flex gap-6">
+          <label><input type="radio" name="Gender" value="male" class="mr-1"> Male</label>
+          <label><input type="radio" name="Gender" value="female" class="mr-1"> Female</label>
+          <label><input type="radio" name="Gender" value="other" class="mr-1"> Other</label>
+        </div>
+      </div>
+    </section>
 
-        <label for="Name">First Name :</label>
+    <!-- Parents Info -->
+    <section>
+      <h3 class="text-xl font-semibold text-purple-600 mb-3">👨‍👩‍👧 Parent Details</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" name="father" id="father" placeholder="Father's Name" required class="input" />
+        <input type="text" name="mother" id="mother" placeholder="Mother's Name" required class="input" />
+        <input type="text" name="occupation" id="occupation" placeholder="Father's Occupation" required class="input" />
+        <input type="text" name="occupationm" id="occupationm" placeholder="Mother's Occupation" required class="input" />
+      </div>
+    </section>
 
-        <input type="text" name="Name" id="Name" placeholder="Ex: Subhadip" autofocus required>
-
-        <label for="name">Middle Name :</label>
-
-        <input type="text" name="name" id="name" placeholder="Ex: Jayadip" required>
-
-        <label for="text"> Last Name :</label>
-
-        <input type="text" name="text" id="text" placeholder="Ex: Samanta" required>
-        <label for="date">Date Of Birth :</label>
-        <input type="date" name="date" id="date">
-        <label for="male">Male</label>
-        <input type="radio" name="Gender" id="male" value="male">
-        <label for="female">Female</label>
-        <input type="radio" name="Gender" id="female" value="female">
-        <label for="other">Other</label>
-        <input type="radio" name="Gender" id="other" value="other">
-        <br><br>
-        <label for="father">Father's Name :</label>
-        <input type="text" name="father" id="father" placeholder="Father's Name" required>
-        <label for="mother "> Mother's Name :</label>
-        <input type="text" name="mother" id="mother" placeholder="Mother's Name" required>
-        <label for="occupation">Father's Occupation :</label>
-        <input type="text" name="occupation" id="occupation" placeholder="Like: Farmer" required>
-        <label for="occupationm">Mother's Occupation :</label>
-        <input type="text" name="occupationm" id="occupationm" placeholder="Like: Housewife" required>
-        <br><br>
-        <h2>Address</h2>
-        <label for="village">Village :</label>
-        <input type="text" name="village" id="village" placeholder="Like: Shibnagar " required>
-        <label for="po"> Post Office :</label>
-        <input type="text" name="po" id="po" placeholder="Like; Banashyamnagar" required>
-        <label for="ps">Police Station :</label>
-        <input type="text" name="ps" id="ps" placeholder="Like: Pathar Pratima" required>
-        <label for="sd">Sub-Dist :</label>
-        <input type=" text" name="sd " id="sd" placeholder="Like: Kakdwip" required>
-
-        <label for="d ">Dist :</label>
-        <input type="text" name="d " id="d " placeholder="Like: South 24 Parganas" required>
-        <br><br>
-        <label for="states">Choose a state:</label>
-        <select id="states" name="states">
-            <option value="">--Select State--</option>
-            <option value="Andhra Pradesh">Andhra Pradesh</option>
-            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-            <option value="Assam">Assam</option>
-            <option value="Bihar">Bihar</option>
-            <option value="Chhattisgarh">Chhattisgarh</option>
-            <option value="Goa">Goa</option>
-            <option value="Gujarat">Gujarat</option>
-            <option value="Haryana">Haryana</option>
-            <option value="Himachal Pradesh">Himachal Pradesh</option>
-            <option value="Jharkhand">Jharkhand</option>
-            <option value="Karnataka">Karnataka</option>
-            <option value="Kerala">Kerala</option>
-            <option value="Madhya Pradesh">Madhya Pradesh</option>
-            <option value="Maharashtra">Maharashtra</option>
-            <option value="Manipur">Manipur</option>
-            <option value="Meghalaya">Meghalaya</option>
-            <option value="Mizoram">Mizoram</option>
-            <option value="Nagaland">Nagaland</option>
-            <option value="Odisha">Odisha</option>
-            <option value="Punjab">Punjab</option>
-            <option value="Rajasthan">Rajasthan</option>
-            <option value="Sikkim">Sikkim</option>
-            <option value="Tamil Nadu">Tamil Nadu</option>
-            <option value="Telangana">Telangana</option>
-            <option value="Tripura">Tripura</option>
-            <option value="Uttarakhand">Uttarakhand</option>
-            <option value="Uttar Pradesh">Uttar Pradesh</option>
-            <option value="West Bengal">West Bengal</option>
-            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-            <option value="Chandigarh">Chandigarh</option>
-            <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
-            <option value="Lakshadweep">Lakshadweep</option>
-            <option value="Delhi">Delhi</option>
-            <option value="Puducherry">Puducherry</option>
+    <!-- Address -->
+    <section>
+      <h3 class="text-xl font-semibold text-purple-600 mb-3">📍 Address</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" name="village" id="village" placeholder="Village (e.g. Shibnagar)" required class="input" />
+        <input type="text" name="po" id="po" placeholder="Post Office" required class="input" />
+        <input type="text" name="ps" id="ps" placeholder="Police Station" required class="input" />
+        <input type="text" name="sd" id="sd" placeholder="Sub-Dist (e.g. Kakdwip)" required class="input" />
+        <input type="text" name="d" id="d" placeholder="District (e.g. South 24 Parganas)" required class="input" />
+        <select name="states" id="states" required class="input">
+          <option value="">--Select State--</option>
+          <option value="West Bengal">West Bengal</option>
+          <option value="Assam">Assam</option>
+          <option value="Jharkhand">Jharkhand</option>
         </select>
-        <label for="Country"> Country :</label>
-        <select name="Country" id="Country">
-            <option value="">--Select Your Country--</option>
-            <option value="AF">Afghanistan</option>
-            <option value="AL">Albania</option>
-            <option value="DZ">Algeria</option>
-            <option value="AS">American Samoa</option>
-            <option value="AD">Andorra</option>
-            <option value="AO">Angola</option>
-            <option value="AI">Anguilla</option>
-            <option value="AQ">Antarctica</option>
-            <option value="AG">Antigua and Barbuda</option>
-            <option value="AR">Argentina</option>
-            <option value="AM">Armenia</option>
-            <option value="AW">Aruba</option>
-            <option value="AU">Australia</option>
-            <option value="AT">Austria</option>
-            <option value="AZ">Azerbaijan</option>
-            <option value="BS">Bahamas</option>
-            <option value="BH">Bahrain</option>
-            <option value="BD">Bangladesh</option>
-            <option value="BB">Barbados</option>
-            <option value="BY">Belarus</option>
-            <option value="BE">Belgium</option>
-            <option value="BZ">Belize</option>
-            <option value="BJ">Benin</option>
-            <option value="BM">Bermuda</option>
-            <option value="BT">Bhutan</option>
-            <option value="BO">Bolivia</option>
-            <option value="BA">Bosnia and Herzegovina</option>
-            <option value="BW">Botswana</option>
-            <option value="BR">Brazil</option>
-            <option value="IO">British Indian Ocean Territory</option>
-            <option value="BN">Brunei Darussalam</option>
-            <option value="BG">Bulgaria</option>
-            <option value="BF">Burkina Faso</option>
-            <option value="BI">Burundi</option>
-            <option value="KH">Cambodia</option>
-            <option value="CM">Cameroon</option>
-            <option value="CA">Canada</option>
-            <option value="CV">Cape Verde</option>
-            <option value="KY">Cayman Islands</option>
-            <option value="CF">Central African Republic</option>
-            <option value="TD">Chad</option>
-            <option value="CL">Chile</option>
-            <option value="CN">China</option>
-            <option value="CO">Colombia</option>
-            <option value="KM">Comoros</option>
-            <option value="CG">Congo</option>
-            <option value="CD">Congo (Democratic Republic)</option>
-            <option value="CR">Costa Rica</option>
-            <option value="CI">Côte d'Ivoire</option>
-            <option value="HR">Croatia</option>
-            <option value="CU">Cuba</option>
-            <option value="CY">Cyprus</option>
-            <option value="CZ">Czech Republic</option>
-            <option value="DK">Denmark</option>
-            <option value="DJ">Djibouti</option>
-            <option value="DM">Dominica</option>
-            <option value="DO">Dominican Republic</option>
-            <option value="EC">Ecuador</option>
-            <option value="EG">Egypt</option>
-            <option value="SV">El Salvador</option>
-            <option value="GQ">Equatorial Guinea</option>
-            <option value="ER">Eritrea</option>
-            <option value="EE">Estonia</option>
-            <option value="ET">Ethiopia</option>
-            <option value="FK">Falkland Islands</option>
-            <option value="FO">Faroe Islands</option>
-            <option value="FJ">Fiji</option>
-            <option value="FI">Finland</option>
-            <option value="FR">France</option>
-            <option value="GF">French Guiana</option>
-            <option value="PF">French Polynesia</option>
-            <option value="GA">Gabon</option>
-            <option value="GM">Gambia</option>
-            <option value="GE">Georgia</option>
-            <option value="DE">Germany</option>
-            <option value="GH">Ghana</option>
-            <option value="GI">Gibraltar</option>
-            <option value="GR">Greece</option>
-            <option value="GL">Greenland</option>
-            <option value="GD">Grenada</option>
-            <option value="GU">Guam</option>
-            <option value="GT">Guatemala</option>
-            <option value="GG">Guernsey</option>
-            <option value="GN">Guinea</option>
-            <option value="GW">Guinea-Bissau</option>
-            <option value="GY">Guyana</option>
-            <option value="HT">Haiti</option>
-            <option value="HN">Honduras</option>
-            <option value="HK">Hong Kong</option>
-            <option value="HU">Hungary</option>
-            <option value="IS">Iceland</option>
-            <option value="IN">India</option>
-            <option value="ID">Indonesia</option>
-            <option value="IR">Iran</option>
-            <option value="IQ">Iraq</option>
-            <option value="IE">Ireland</option>
-            <option value="IL">Israel</option>
-            <option value="IT">Italy</option>
-            <option value="JM">Jamaica</option>
-            <option value="JP">Japan</option>
-            <option value="JE">Jersey</option>
-            <option value="JO">Jordan</option>
-            <option value="KZ">Kazakhstan</option>
-            <option value="KE">Kenya</option>
-            <option value="KI">Kiribati</option>
-            <option value="KP">Korea, Democratic People's Republic of</option>
-            <option value="KR">Korea, Republic of</option>
-            <option value="KW">Kuwait</option>
-            <option value="KG">Kyrgyzstan</option>
-            <option value="LA">Lao People's Democratic Republic</option>
-            <option value="LV">Latvia</option>
-            <option value="LB">Lebanon</option>
-            <option value="LS">Lesotho</option>
-            <option value="LR">Liberia</option>
-            <option value="LY">Libya</option>
-            <option value="LI">Liechtenstein</option>
-            <option value="LT">Lithuania</option>
-            <option value="LU">Luxembourg</option>
-            <option value="MO">Macao</option>
-            <option value="MK">North Macedonia</option>
-            <option value="MG">Madagascar</option>
-            <option value="MW">Malawi</option>
-            <option value="MY">Malaysia</option>
-            <option value="MV">Maldives</option>
-            <option value="ML">Mali</option>
-            <option value="MT">Malta</option>
-            <option value="MH">Marshall Islands</option>
-            <option value="MQ">Martinique</option>
-            <option value="MR">Mauritania</option>
-            <option value="MU">Mauritius</option>
-            <option value="YT">Mayotte</option>
-            <option value="MX">Mexico</option>
-            <option value="FM">Micronesia (Federated States of)</option>
-            <option value="MD">Moldova</option>
-            <option value="MC">Monaco</option>
-            <option value="MN">Mongolia</option>
-            <option value="ME">Montenegro</option>
-            <option value="MS">Montserrat</option>
-            <option value="MA">Morocco</option>
-            <option value="MZ">Mozambique</option>
-            <option value="MM">Myanmar</option>
-            <option value="NA">Namibia</option>
-            <option value="NR">Nauru</option>
-            <option value="NP">Nepal</option>
-            <option value="NL">Netherlands</option>
-            <option value="NC">New Caledonia</option>
-            <option value="NZ">New Zealand</option>
-            <option value="NI">Nicaragua</option>
-            <option value="NE">Niger</option>
-            <option value="NG">Nigeria</option>
-            <option value="NU">Niue</option>
-            <option value="NF">Norfolk Island</option>
-            <option value="MP">Northern Mariana Islands</option>
-            <option value="NO">Norway</option>
-
-
+        <select name="Country" id="Country" required class="input">
+          <option value="">--Select Country--</option>
+          <option value="IN">India</option>
+          <option value="BD">Bangladesh</option>
         </select>
-        <label for="pincode">Choose a Pincode:</label>
-        <select id="pincode" name="pincode">
-            <option value="">--Select Pincode--</option>
-            <option value="700001">700001 - Kolkata (BBD Bagh)</option>
-            <option value="700002">700002 - Kolkata (Khidderpore)</option>
-            <option value="700003">700003 - Kolkata (Barabazar)</option>
-            <option value="700006">700006 - Kolkata (Alambazar)</option>
-            <option value="700027">700027 - Kolkata (Tollygunge)</option>
-            <option value="700029">700029 - Kolkata (Hazra)</option>
-            <option value="700032">700032 - Kolkata (Jadabpur)</option>
-            <option value="700036">700036 - Kolkata (Paddapukur)</option>
-            <option value="700078">700078 - Kolkata (Behala)</option>
-            <option value="700082">700082 - Kolkata (Lake Gardens)</option>
-            <option value="700093">700093 - Kolkata (Moulali)</option>
-            <option value="700099">700099 - Kolkata (Kolkata GPO)</option>
-            <option value="711101">711101 - Howrah (City Centre)</option>
-            <option value="711204">711204 - Howrah (Shibpur)</option>
-            <option value="741101">741101 - Murshidabad (Berhampore)</option>
-            <option value="742101">742101 - Nadia (Krishnanagar)</option>
-            <option value="743145">743145 - South 24 Parganas (Sunderban)</option>
-            <option value="743212">743212 - South 24 Parganas (Diamond Harbour)</option>
-            <option value="723101">723101 - Purulia (Purulia)</option>
-            <option value="723201">723201 - Bankura (Bankura)</option>
-            <option value="722101">722101 - Birbhum (Suri)</option>
-            <option value="721101">721101 - Hooghly (Chandannagar)</option>
-            <option value="713101">713101 - Burdwan (Asansol)</option>
-            <option value="713303">713303 - Bardhaman (Memari)</option>
-            <option value="731101">731101 - Maldah (Maldah)</option>
-            <option value="700135">700135 - Kolkata (Behala Chowrasta)</option>
-            <option value="700040">700040 - Kolkata (Alambazar)</option>
-            <option value="722149">722149 - Murarai (Murarai)</option>
-            <option value="723145">723145 - Durgapur</option>
-            <option value="711202">711202 - Howrah (Liluah)</option>
+        <select name="pincode" id="pincode" required class="input">
+          <option value="">--Select Pincode--</option>
+          <option value="743145">743145 - South 24 Parganas</option>
+          <option value="700032">700032 - Jadavpur</option>
         </select>
-        <h2>Comunication Details </h2>
-        <label for="mobile">Mobile Number :</label>
-        <input type="number" name="number" id="number" placeholder="Ex: 7407125405" required max="9999999999". min="1000000000">
-        <label for="email"> Email Id :</label>
-        <input type="email" name="email" id="email" placeholder="Ex: ssubhadip721@gmail.com" required>
-        <br><br><br>
-       
-        <input type="checkbox" name="term and condition" id="TC">
-         <label for="TC"> I accept all the terms and conditions of the company.
-            <br> I will maintain all the rules and regulations of agreement.</label>
-            <br><br>
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
+      </div>
+    </section>
 
+    <!-- Contact -->
+    <section>
+      <h3 class="text-xl font-semibold text-purple-600 mb-3">📞 Contact</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="tel" name="number" id="number" placeholder="Mobile Number" required class="input" />
+        <input type="email" name="email" id="email" placeholder="Email Address" required class="input" />
+      </div>
+    </section>
 
+    <!-- Terms & Buttons -->
+    <section class="pt-4">
+      <label class="flex items-start gap-2 text-sm mb-4">
+        <input type="checkbox" name="terms" required class="mt-1" />
+        <span>I accept all the terms and conditions of the college and agree to follow all rules and regulations.</span>
+      </label>
 
+      <div class="flex gap-4 justify-center">
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit</button>
+        <button type="reset" class="bg-gray-300 text-black px-6 py-2 rounded hover:bg-gray-400">Reset</button>
+      </div>
+    </section>
+  </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </form>
-
-
-
-
-
-
-
-
-
-
+  <!-- Input Styling -->
+  <style>
+    .input {
+      @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300;
+    }
+  </style>
 </body>
+
+</html>
